@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kalkulator">
+
+    <EditText
+        android:id="@+id/txtangka1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Angka 1"
+        android:inputType="number" />
+
+    <EditText
+        android:inputType="number"
+        android:id="@+id/txtAngka2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Angka2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hasil"
+        android:id="@+id/text_view_hasil"/>
+
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tettambah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="+"
+            android:textSize="@android:dimen/app_icon_size" />
+
+        <Button
+            android:id="@+id/tetkali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="x"
+            android:textSize="@android:dimen/app_icon_size" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tetkurang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="-"
+            android:textSize="@android:dimen/app_icon_size"/>
+        <Button
+            android:id="@+id/textbagi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint=":"
+            android:textSize="@android:dimen/app_icon_size"/>
+    </LinearLayout>
+</LinearLayout>
