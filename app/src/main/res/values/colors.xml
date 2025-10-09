@@ -6,4 +6,9 @@
     <color name="windowBackground">#FFFFFF</color>
     <color name="navigationBarColor">#000000</color>
     <color name="colorAccent">#c8e8ff</color>
+    <color name="correnblue">#6495ED</color>
+    <color name="statelblue">#5BA8E9</color>
+    <color name="skyblue">#87CEEB</color>
+    <color name="lightsalmon">#FFA07A</color>
+    <color name="biruabuabu">#B0C4DE</color>
 </resources>

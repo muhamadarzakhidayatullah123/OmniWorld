@@ -23,8 +23,8 @@ public class IconTextTabsActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private int[] tabIcons = {
             R.drawable.ic_tab_favourite,
-            R.drawable.ic_tab_call,
-            R.drawable.ic_tab_contacts
+            R.drawable.datar,
+            R.drawable.ruang
     };
 
     @Override
@@ -50,8 +50,8 @@ public class IconTextTabsActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new OneFragment(), "KALKULATOR");
-        adapter.addFrag(new TwoFragment(), "TWO");
-        adapter.addFrag(new ThreeFragment(), "THREE");
+        adapter.addFrag(new TwoFragment(), "BANGUN DATAR");
+        adapter.addFrag(new ThreeFragment(), "BANGUN RUANG");
         viewPager.setAdapter(adapter);
     }
 
